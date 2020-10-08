@@ -1,0 +1,34 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+html {
+  font-size: 62.5%;
+  font-family: 'Lato', sans-serif;
+  box-sizing: border-box; }
+  html *,
+  html *::before,
+  html *::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0; }
+  html body {
+    width: 100%;
+    font-size: 1.6rem;
+    background: #eee; }
+    html body #header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      min-height: 7.5rem;
+      padding: 0 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+      html body #header #header-img {
+        max-width: 30rem; }
+      html body #header #nav-bar {
+        width: 35vw;
+        display: flex;
+        justify-content: space-between;
+        list-style: none; }
+        html body #header #nav-bar a {
+          color: #000;
+          text-decoration: none; }
