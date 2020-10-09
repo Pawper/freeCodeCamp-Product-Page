@@ -20,6 +20,9 @@
   <!-- Links -->
   <!-- CSS -->
   <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+
+
 </head>
 
 <body>
@@ -35,10 +38,74 @@
     <h2>Handcrafted, home-made masterpieces</h2>
     <form id="form" action="https://www.freecodecamp.com/email-submit">
       <input type="email" id="email" name="email" placeholder="Enter your email address" required>
-      <input type="submit" id="submit" value="Get Started">
+      <input type="submit" id="submit" value="Get Started" class="btn">
     </form>
   </section>
-
+  <div class="container">
+    <section id="features" class="features">
+      <div class="features__item">
+        <i class="fa fa-3x fa-fire"></i>
+        <h2>Premium Features</h2>
+        <p>Our trombones use the shiniest brass which is sourced locally. This will increase the longevity of your purchase.</p>
+      </div>
+      <div class="features__item">
+        <i class="fa fa-3x fa-truck"></i>
+        <h2>Fast Shipping</h2>
+        <p>We make sure you receive your trombone as soon as we have finished making it. We also provide free returns if you are not satisfied.</p>
+      </div>
+      <div class="features__item">
+        <i class="fa fa-3x fa-battery-full"></i>
+        <h2>Quality Assuranc</h2>
+        <p>For every purchase you make, we will ensure there are no damages or faults and we will check and test the pitch of your instrument.</p>
+      </div>
+    </section>
+    <section id="how-it-works">
+      <iframe id="video" src="https://www.youtube-nocookie.com/embed/y8Yv4pnO7qc?rel=0&controls=0&showinfo=0" allowfullscreen height="315" frameborder="0"></iframe>
+    </section>
+    <section id="pricing">
+      <div class="product">
+        <div class="level">Tenor Trombone</div>
+        <h2>$600</h2>
+        <ol>
+          <li>Lorem ipsum.</li>
+          <li>Lorem ipsum.</li>
+          <li>Lorem ipsum dolor.</li>
+          <li>Lorem ipsum.</li>
+        </ol>
+        <button class="btn">Select</button>
+      </div>
+      <div class="product">
+        <div class="level">Bass Trombone</div>
+        <h2>$900</h2>
+        <ol>
+          <li>Lorem ipsum.</li>
+          <li>Lorem ipsum.</li>
+          <li>Lorem ipsum dolor.</li>
+          <li>Lorem ipsum.</li>
+        </ol>
+        <button class="btn">Select</button>
+      </div>
+      <div class="product">
+        <div class="level">Valve Trombone</div>
+        <h2>$1200</h2>
+        <ol>
+          <li>Plays similar to a Trumpet</li>
+          <li>Great for Jazz Bands</li>
+          <li>Lorem ipsum dolor.</li>
+          <li>Lorem ipsum.</li>
+        </ol>
+        <button class="btn">Select</button>
+      </div>
+    </section>
+    <footer>
+      <ul>
+        <li><a href="#">Privacy</a></li>
+        <li><a href="#">Terms</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <span>Copyright 2016, Original Trombones</span>
+    </footer>
+  </div>
   <!-- Put scripts down here so HTML render isn't stopped to load JS -->
   <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </body>

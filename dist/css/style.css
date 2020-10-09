@@ -1,4 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+.btn {
+  border-radius: .2rem;
+  cursor: pointer;
+  font-size: 1.6rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  padding: 0 2rem;
+  height: 4rem;
+  background-color: #f1c40f;
+  border: none;
+  transition: background-color 1s; }
+  .btn:hover {
+    background-color: orange; }
+
 html {
   font-size: 62.5%;
   font-family: 'Lato', sans-serif;
@@ -22,7 +36,8 @@ html {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 1rem; }
+      gap: 1rem;
+      background: #eee; }
       @media only screen and (max-width: 37.5em) {
         html body #header {
           flex-direction: column; } }
@@ -46,10 +61,15 @@ html {
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 1.5rem; }
+      justify-content: center;
+      gap: 1.5rem;
+      background: linear-gradient(rgba(70, 130, 180, 0.5), rgba(218, 165, 32, 0.5)), center/cover no-repeat url(https://source.unsplash.com/Df95vCiH-OQ);
+      height: 50rem; }
       @media only screen and (max-width: 37.5em) {
         html body #hero {
           margin-top: 12rem; } }
+      html body #hero h2 {
+        color: white; }
       html body #hero #form {
         width: 100%;
         display: flex;
@@ -61,8 +81,98 @@ html {
           max-width: 27.5rem;
           padding: .5rem; }
         html body #hero #form #submit {
-          background-color: #f1c40f;
-          border: none;
           width: 100%;
           max-width: 15rem;
-          height: 3rem; }
+          height: 3rem;
+          font-size: 1.6rem;
+          font-weight: 900; }
+    html body .container {
+      max-width: 1000px;
+      width: 100%;
+      margin: 0 auto; }
+      html body .container .features {
+        display: grid;
+        gap: 5rem;
+        padding: 5rem; }
+        html body .container .features__item {
+          display: grid;
+          grid-template-columns: 20vw 1fr;
+          grid-template-areas: "icon heading" "icon description";
+          align-items: center; }
+          @media only screen and (max-width: 34.375em) {
+            html body .container .features__item {
+              grid-template-columns: 1fr;
+              grid-template-areas: "heading" "description"; } }
+          html body .container .features__item .fa {
+            grid-area: icon;
+            justify-self: center;
+            color: darkorange; }
+            @media only screen and (max-width: 34.375em) {
+              html body .container .features__item .fa {
+                display: none; } }
+          html body .container .features__item h2 {
+            grid-area: heading; }
+          html body .container .features__item p {
+            grid-area: description; }
+      html body .container #how-it-works {
+        display: flex;
+        justify-content: center; }
+        html body .container #how-it-works #video {
+          max-width: 560px;
+          width: 100%; }
+      html body .container #pricing {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: center;
+        padding: 5rem 1rem;
+        gap: 2rem; }
+        @media only screen and (max-width: 50em) {
+          html body .container #pricing {
+            display: flex;
+            flex-direction: column;
+            align-items: center; } }
+        html body .container #pricing .product {
+          border: 1px solid black;
+          border-radius: .3rem;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          text-align: center; }
+          @media only screen and (max-width: 50em) {
+            html body .container #pricing .product {
+              max-width: 300px;
+              width: 100%; } }
+          html body .container #pricing .product .level {
+            background-color: #ddd;
+            padding: 1.5rem 0;
+            width: 100%;
+            text-transform: uppercase;
+            font-weight: 700; }
+          html body .container #pricing .product h2 {
+            margin: 1.5rem; }
+          html body .container #pricing .product ol {
+            margin: 1.5rem; }
+            html body .container #pricing .product ol li {
+              list-style: none;
+              padding: .5rem 0; }
+          html body .container #pricing .product button {
+            margin: 1.5rem 0; }
+      html body .container footer {
+        background-color: #ddd;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+        align-items: flex-end; }
+        html body .container footer ul {
+          display: flex;
+          gap: 1rem;
+          justify-content: flex-end; }
+          html body .container footer ul li {
+            list-style: none; }
+            html body .container footer ul li a {
+              text-decoration: none;
+              color: black; }
+        html body .container footer span {
+          color: #444;
+          font-size: 1.4rem; }
