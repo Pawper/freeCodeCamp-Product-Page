@@ -1,0 +1,16 @@
+.btn {
+  border-radius: .2rem;
+  cursor: pointer;
+  font-size: 1.6rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  padding: 0 2rem;
+  height: 4rem;
+  background-color: #f1c40f;
+  border: none;
+  transition: background-color 1s;
+
+  &:hover {
+    background-color: orange;
+  }
+}
