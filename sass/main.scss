@@ -1,11 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
 // RESPONSIVE BREAKPOINTS
-// 800
-// 650
-// 600
-// 550
-
+$bp-largest: 50em; // 800px
+$bp-large: 40.625em; // 650px
+$bp-medium: 37.5em; // 600px
+$bp-small: 34.375em; // 550px
 
 html {
   font-size: 62.5%;
@@ -30,10 +29,15 @@ html {
       top: 0;
       width: 100%;
       min-height: 7.5rem;
-      padding: 0 2rem;
+      padding: 1.5rem 2rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      gap: 1rem;
+
+      @media only screen and (max-width: $bp-medium) {
+        flex-direction: column;
+      }
 
       #header-img {
         max-width: 30rem;
@@ -44,10 +48,50 @@ html {
         display: flex;
         justify-content: space-between;
         list-style: none;
+        text-align: center;
+
+        @media only screen and (max-width: $bp-large) {
+          flex-direction: column;
+        }
 
         a {
           color: #000;
           text-decoration: none;
+        }
+      }
+    }
+
+    #hero {
+      margin-top: 7rem;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+
+      @media only screen and (max-width: $bp-medium) {
+        margin-top: 12rem;
+      }
+
+      #form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+
+        #email {
+          width: 100%;
+          max-width: 27.5rem;
+          padding: .5rem;
+        }
+
+        #submit {
+          background-color: #f1c40f;
+          border: none;
+          width: 100%;
+          max-width: 15rem;
+          height: 3rem;
         }
       }
     }

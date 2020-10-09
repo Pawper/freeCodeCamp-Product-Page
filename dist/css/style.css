@@ -18,17 +18,51 @@ html {
       top: 0;
       width: 100%;
       min-height: 7.5rem;
-      padding: 0 2rem;
+      padding: 1.5rem 2rem;
       display: flex;
       justify-content: space-between;
-      align-items: center; }
+      align-items: center;
+      gap: 1rem; }
+      @media only screen and (max-width: 37.5em) {
+        html body #header {
+          flex-direction: column; } }
       html body #header #header-img {
         max-width: 30rem; }
       html body #header #nav-bar {
         width: 35vw;
         display: flex;
         justify-content: space-between;
-        list-style: none; }
+        list-style: none;
+        text-align: center; }
+        @media only screen and (max-width: 40.625em) {
+          html body #header #nav-bar {
+            flex-direction: column; } }
         html body #header #nav-bar a {
           color: #000;
           text-decoration: none; }
+    html body #hero {
+      margin-top: 7rem;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem; }
+      @media only screen and (max-width: 37.5em) {
+        html body #hero {
+          margin-top: 12rem; } }
+      html body #hero #form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem; }
+        html body #hero #form #email {
+          width: 100%;
+          max-width: 27.5rem;
+          padding: .5rem; }
+        html body #hero #form #submit {
+          background-color: #f1c40f;
+          border: none;
+          width: 100%;
+          max-width: 15rem;
+          height: 3rem; }
