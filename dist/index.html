@@ -1,113 +1,175 @@
 <!DOCTYPE html>
-<!-- lang attribute helps search engines return language specific results, and it is also used by screen readers that switch language profiles to provide the correct accent and pronunciation. Also used for hyphenation via CSS -->
 <html lang="en">
-<!-- SEO cheat sheet https://learn-the-web.algonquindesign.ca/topics/seo-cheat-sheet/ -->
 <!-- HTML Validator https://validator.w3.org/#validate_by_input -->
 
 <head>
-  <!-- For compatibility -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-  <!-- Every html page must have a title! Use · as a separater. -->
   <title>FCC: Product Landing Page</title>
 
   <!-- Robots meta tags https://developers.google.com/search/reference/robots_meta_tag -->
   <!-- Remove if you want the site to be crawled -->
   <meta name="robots" content="NOINDEX, NOFOLLOW">
 
-  <!-- Links -->
-  <!-- CSS -->
+  <!-- Stylesheets -->
   <link rel="stylesheet" type="text/css" href="css/style.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
-
-
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+    integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
 </head>
 
 <body>
-  <header id="header">
-    <img src="img/original_trombones.png" alt="" id="header-img">
-    <nav id="nav-bar">
-      <li><a href="#features" class="nav-link">Features</a></li>
-      <li><a href="#how-it-works" class="nav-link">How It Works</a></li>
-      <li><a href="#pricing" class="nav-link">Pricing</a></li>
-    </nav>
+  <!-- User Story #1: My product landing page should have a header element with a corresponding id="header". -->
+  <header id="header" class="header">
+    <div class="header__container">
+      <div class="header__logos">
+        <!-- User Story #2: I can see an image within the header element with a corresponding id="header-img". A company logo would make a good image here. -->
+        <img src="img/tomb-raider-logo.png" alt="" id="header-img" class="header__main-logo">
+        <img src="img/dagger-of-xian-logo.png" alt="" class="header__sub-logo">
+      </div>
+
+      <!-- User Story #3: Within the #header element I can see a nav element with a corresponding id="nav-bar". -->
+      <nav id="nav-bar" class="header__navbar">
+        <!-- User Story #4: I can see at least three clickable elements inside the nav element, each with the class nav-link. -->
+        <!-- User Story #5: When I click a .nav-link button in the nav element, I am taken to the corresponding section of the landing page. -->
+        <a href="#features" class="nav-link header__navlink">Features</a>
+        <a href="#gameplay" class="nav-link header__navlink">Gameplay</a>
+        <a href="#download" class="nav-link header__navlink">Download</a>
+      </nav>
+    </div>
   </header>
-  <section id="hero">
-    <h2>Handcrafted, home-made masterpieces</h2>
-    <form id="form" action="https://www.freecodecamp.com/email-submit">
-      <input type="email" id="email" name="email" placeholder="Enter your email address" required>
-      <input type="submit" id="submit" value="Get Started" class="btn">
-    </form>
-  </section>
   <div class="container">
+    <section class="hero">
+      <div class="hero__container">
+        <h2 class="hero__heading">A fan remake of Tomb Raider 2.<br>Don't miss out on updates.
+        </h2>
+        <!-- User Story #7: My landing page has a form element with a corresponding id="form". -->
+        <form id="form" action="https://www.freecodecamp.com/email-submit" class="hero__form">
+          <!-- User Story #8: Within the form, there is an input field with id="email" where I can enter an email address. -->
+          <!-- User Story #9: The #email input field should have placeholder text to let the user know what the field is for. -->
+          <!-- User Story #10: The #email input field uses HTML5 validation to confirm that the entered text is an email address. -->
+          <input type="email" id="email" name="email" placeholder="Enter your email address" required
+            class="hero__input">
+          <!-- User Story #11: Within the form, there is a submit input with a corresponding id="submit". -->
+          <!-- User Story #12: When I click the #submit element, the email is submitted to a static page (use this mock URL: https://www.freecodecamp.com/email-submit). -->
+          <input type="submit" id="submit" value="Get Updates" class="btn hero__submit">
+        </form>
+        <div class="save-crystal">
+          <!-- I want to make a spinning save crystal with CSS 😬 -->
+        </div>
+      </div>
+    </section>
     <section id="features" class="features">
       <div class="features__item">
-        <i class="fa fa-3x fa-fire"></i>
-        <h2>Premium Features</h2>
-        <p>Our trombones use the shiniest brass which is sourced locally. This will increase the longevity of your purchase.</p>
+        <i class="fa fa-3x fa-gamepad features__icon"></i>
+        <h2 class="features__heading">Classic or Modern Controls</h2>
+        <p class="features__description">Relive the nostalgic challenge of the original game's tank contorls, or use
+          modern controls for a more responsive experience.</p>
       </div>
       <div class="features__item">
-        <i class="fa fa-3x fa-truck"></i>
-        <h2>Fast Shipping</h2>
-        <p>We make sure you receive your trombone as soon as we have finished making it. We also provide free returns if you are not satisfied.</p>
+        <i class="fa fa-3x fa-archway features__icon"></i>
+        <h2 class="features__heading">Remastured in Immersive Detail</h2>
+        <p class="features__description">Every level brought to life with realistic materials, lush foliage and gripping
+          adventure.</p>
       </div>
       <div class="features__item">
-        <i class="fa fa-3x fa-battery-full"></i>
-        <h2>Quality Assuranc</h2>
-        <p>For every purchase you make, we will ensure there are no damages or faults and we will check and test the pitch of your instrument.</p>
+        <i class="fa fa-3x fa-exclamation-triangle features__icon"></i>
+        <h2 class="features__heading">More Dangerous Than Ever</h2>
+        <p class="features__description">Physics-powered traps spring around every corner and enemies surmount obstacles
+          to run Lara down.</p>
       </div>
     </section>
-    <section id="how-it-works">
-      <iframe id="video" src="https://www.youtube-nocookie.com/embed/y8Yv4pnO7qc?rel=0&controls=0&showinfo=0" allowfullscreen height="315" frameborder="0"></iframe>
+    <section id="gameplay" class="gameplay">
+      <!-- User Story #6: I can watch an embedded product video with id="video". -->
+      <iframe id="video" class="gameplay__iframe" src="https://www.youtube-nocookie.com/embed/6be0UUsN68s?rel=0&controls=0&showinfo=0"
+        allowfullscreen height="315" frameborder="0"></iframe>
+      <!-- https://www.youtube.com/watch?v=6be0UUsN68s -->
     </section>
-    <section id="pricing">
-      <div class="product">
-        <div class="level">Tenor Trombone</div>
-        <h2>$600</h2>
-        <ol>
-          <li>Lorem ipsum.</li>
-          <li>Lorem ipsum.</li>
-          <li>Lorem ipsum dolor.</li>
-          <li>Lorem ipsum.</li>
-        </ol>
-        <button class="btn">Select</button>
-      </div>
-      <div class="product">
-        <div class="level">Bass Trombone</div>
-        <h2>$900</h2>
-        <ol>
-          <li>Lorem ipsum.</li>
-          <li>Lorem ipsum.</li>
-          <li>Lorem ipsum dolor.</li>
-          <li>Lorem ipsum.</li>
-        </ol>
-        <button class="btn">Select</button>
-      </div>
-      <div class="product">
-        <div class="level">Valve Trombone</div>
-        <h2>$1200</h2>
-        <ol>
-          <li>Plays similar to a Trumpet</li>
-          <li>Great for Jazz Bands</li>
-          <li>Lorem ipsum dolor.</li>
-          <li>Lorem ipsum.</li>
-        </ol>
-        <button class="btn">Select</button>
+    <section id="download" class="download">
+      <div class="download__container">
+        <div class="download__lead">
+          <h2 class="download__heading">Download the Tomb Raider DOX Demo</h2>
+          <span class="download__version">Version 1.1 [1,7 Go]</span>
+        </div>
+        <div class="download__content">
+          <div class="download__instructions">
+            <input class="lang-menu__radio" type="radio" name="lang" id="lang_en" checked><label for="lang_en" class="lang-menu__label">EN</label>
+            <div class="lang-box lang-english">
+              <h3>Minimum Requirements</h3>
+              <ul>
+                <li>Windows Seven or higher</li>          
+                <li>Graphic card 2GB VRAM with Dx11 comptatible</li>          
+                <li>4GB RAM (8GB strongly recommended)</li>          
+                <li>5,7GB free disk space (1.7 gb for the downloaded file and 4 gb for the uncompressed folder)</li>
+              </ul>
+              
+              <h3>Installation Instructions</h3>        
+              <ol>
+                <li>Download the file (64-Bit or 32-Bit, depending of your system)</li>
+                <li>Execute the setup file</li>
+                <li>If you need to install some prerequisite (Framework 3.5 etc…) go to Engine/Extras/Redist/en-us/ and execute UE4PrereqSetup_x64.exe or UE4PrereqSetup_x86.exe</li>
+                <li>Launch TombRaiderDOX.exe</li>
+                <li>Enjoy!</li>
+              </ol>
+              <p>
+                If you can’t start it with all of these steps, try to launch it as administrator
+              </p>
+            </div>
+            <input class="lang-menu__radio" type="radio" name="lang" id="lang_fr"><label for="lang_fr" class="lang-menu__label">FR</label>
+            <div class="lang-box lang-french">
+              <h3>Configuration minimum requise</h3>
+              <ul>
+                <li>Windows 7 ou supérieur</li>          
+                <li>Une carte graphique qui comprend 2 Go de mémoire vidéo (VRAM) compatible avec DirectX11</li>          
+                <li>4 Go de RAM (8 Go fortement recommandés)</li>          
+                <li>5,7 Go d’espace libre sur le disque (1.7 Go pour le fichier de téléchargement et 4 Go pour les fichiers décompressés)</li>
+              </ul>
+              
+              <h3>Procédure d’installation</h3>        
+              <ol>
+                <li>Téléchargez le fichier (64-bits ou 32-bits, selon votre système)</li>
+                <li>Installez le jeu</li>
+                <li>Si vous avez besoin d’installer/de mettre à jour quelques utilitaires nécessaires au bon fonctionnement de la démo (comme Framework 3.5), rendez-vous dans : Engine/Extras/Redist/en-us/ et lancez le fichier “UE4PrereqSetup_x64.exe” ou “UE4PrereqSetup_x86.exe”</li>
+                <li>Lancez le fichier “TombRaiderDOX.exe” pour jouer</li>
+                <li>Éclatez-vous !</li>
+              </ol>
+              <p>
+                Si vous ne parvenez toujours pas à lancer la démo, essayer de la lancer en tant qu’administrateur, pour ce faire : clic droit sur le fichier “TombRaiderDOX.exe” et “Exécuter en tant qu’administrateur”.
+              </p>
+            </div>
+          </div>
+          <div class="download__links">
+            <a href="#" class="btn download__btn">
+              <i class="fas fa-download download__btn-icon"></i>
+              <span class="download__btn-main-text">64-bit</span>
+              <span class="download__btn-sub-text">(Thanks to Kevin)</span>
+            </a>
+            <a href="#" class="btn download__btn">
+              <i class="fas fa-download download__btn-icon"></i>
+              <span class="download__btn-main-text">64-bit</span>
+              <span class="download__btn-sub-text">(Mega)</span>
+            </a>
+            <a href="#" class="btn download__btn">
+              <i class="fas fa-download download__btn-icon"></i>
+              <span class="download__btn-main-text">32-bit</span>
+              <span class="download__btn-sub-text">(Thanks to Kevin)</span>
+            </a>
+            <a href="#" class="btn download__btn">
+              <i class="fas fa-download download__btn-icon"></i>
+              <span class="download__btn-main-text">32-bit</span>
+              <span class="download__btn-sub-text">(Mega)</span>
+            </a>
+          </div>
+        </div>
       </div>
     </section>
-    <footer>
-      <ul>
-        <li><a href="#">Privacy</a></li>
-        <li><a href="#">Terms</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-      <span>Copyright 2016, Original Trombones</span>
-    </footer>
   </div>
+  <footer>
+    <span>This is a fake web page made unofficially for a real fan work. Tomb Raider is Copyright 2020, Square
+      Enix</span>
+  </footer>
   <!-- Put scripts down here so HTML render isn't stopped to load JS -->
-  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  <!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
 </body>
 
 </html>

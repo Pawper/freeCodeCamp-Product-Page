@@ -1,0 +1,27 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  // width: 100%;
+  background: center / cover no-repeat url('../img/UE4Game-Win64-Shipping-2016-05-08-08-34-25-77.png');
+  background-attachment: fixed;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  
+  @media only screen and (min-width: $bp-largest) {
+    border-left: .5rem rgb(165, 121, 40) solid;
+    border-right: .5rem rgb(165, 121, 40) solid;
+  }
+}

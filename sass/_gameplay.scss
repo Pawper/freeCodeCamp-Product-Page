@@ -1,0 +1,11 @@
+.gameplay {
+  // User Story #15: My product landing page should utilize CSS flexbox at least once.
+  display: flex;
+  justify-content: center;
+  aspect-ratio: 16 / 9;
+  
+  &__iframe {
+    width: 100%;
+    height: 100%;
+  }
+}

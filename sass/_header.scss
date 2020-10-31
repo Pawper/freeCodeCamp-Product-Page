@@ -1,0 +1,97 @@
+@import 'base';
+
+.header {
+  // User Story #13: The navbar should always be at the top of the viewport.
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  width: 100%;
+  min-height: 7.5rem;
+  background: #222;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 1rem 1.5rem rgba(black, .75);
+
+
+  // User Story #14: My product landing page should have at least one media query.
+  @media only screen and (max-width: $bp-medium) {
+    flex-direction: column;
+  }
+
+  &__container {
+    width: 100%;
+    max-width: 1200px;
+    // User Story #15: My product landing page should utilize CSS flexbox at least once.
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem 3rem;
+
+    @media only screen and (min-width: $bp-largest) {
+      flex-direction: row;
+    }
+  }
+
+  &__logos {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+
+    @media only screen and (min-width: $bp-large) {
+      align-items: center;
+    }
+
+    @media only screen and (min-width: $bp-largest) {
+      align-items: center;
+      margin-top: -2rem;
+      margin-bottom: -7rem;
+    }
+  }
+
+  &__main-logo {
+    max-width: 80vw;
+    max-height: 15vh;
+
+    @media only screen and (min-width: $bp-largest) {
+      max-width: 30rem;
+      max-height: 10rem;
+    }
+  }
+
+  &__sub-logo {
+    
+
+    @media only screen and (min-width: $bp-largest) {
+      margin-bottom: 5rem;
+    }
+  }
+
+  &__navbar {
+    // User Story #15: My product landing page should utilize CSS flexbox at least once.
+    display: flex;
+    justify-items: flex-end;
+    list-style: none;
+    text-align: center;
+
+    // User Story #14: My product landing page should have at least one media query.
+    @media only screen and (max-width: $bp-large) {
+      flex-direction: column;
+    }
+  }
+
+  &__navlink {
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+    letter-spacing: .25ch;
+    color: rgb(228, 167, 55);
+    text-decoration: none;
+    font-weight: bold;
+
+    &:hover {
+      background: #666;
+      color: black;
+    }
+  }
+}

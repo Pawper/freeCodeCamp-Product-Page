@@ -5,12 +5,16 @@
   font-weight: 400;
   text-transform: uppercase;
   padding: 0 2rem;
-  height: 4rem;
-  background-color: #f1c40f;
+  background-color: rgb(228, 167, 55);
   border: none;
-  transition: background-color 1s;
+  transition: background-color .3s;
+  border-radius: .3rem;
+  box-shadow: 0 1rem 1rem rgba(black, .25);
+  text-decoration: none;
+  color: black;
+
 
   &:hover {
-    background-color: orange;
+    background-color: rgb(236, 193, 113);
   }
 }
