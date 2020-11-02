@@ -1,0 +1,33 @@
+.gameplay {
+  position: relative; // Used for arrow buttons
+  display: grid;
+  grid-template-rows: min-content 1fr;
+
+  &__video {
+    display: none;
+    margin: auto;
+    width: 80vw;
+    max-width: 1000px;
+    aspect-ratio: 16 / 9;
+  }
+
+  &__previous-video, &__next-video {
+    cursor: pointer;
+    position: absolute;
+    margin: 3rem;
+    top: 42.5%;
+    color: rgba(white, .75);
+    font-weight: bold;
+    font-size: 4rem;
+    user-select: none;
+
+    &:hover {
+      color: white;
+      transform: scale(1.5);
+    }
+  }
+
+  &__next-video {
+    right: 0;
+  }
+}
