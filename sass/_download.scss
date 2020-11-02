@@ -1,32 +1,18 @@
 .download {
   background: center / cover no-repeat url('../img/Engine-08.22.2017-15.11.14.03.png');
 
-  @media only screen and (min-width: $bp-medium) {
-    background: 
-    linear-gradient(120deg, transparent 40%, black 60%),
-    bottom left -60rem / cover no-repeat url('../img/Engine-08.22.2017-15.11.14.03.png');
-  }
-  @media only screen and (min-width: $bp-large) {
-    background: 
-    linear-gradient(120deg, transparent 40%, black 60%),
-    bottom left -45rem / cover no-repeat url('../img/Engine-08.22.2017-15.11.14.03.png');
-  }
   @media only screen and (min-width: $bp-largest) {
     background: 
     linear-gradient(120deg, transparent 40%, black 60%),
-    bottom left -35rem / cover no-repeat url('../img/Engine-08.22.2017-15.11.14.03.png');
+    bottom left -55rem / cover no-repeat url('../img/Engine-08.22.2017-15.11.14.03.png');
   }
 
   &__container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-    border-radius: .5rem;
     gap: 1rem;
-    position: relative;
-    padding: 1rem;
 
     @media only screen and (min-width: $bp-largest) {
-      padding: 2rem 3rem;
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 
@@ -61,20 +47,21 @@
       border-bottom-left-radius: .5rem;
       box-shadow: inset 0 1px 0 rgba(white, .25);
       border-top: none;
-      padding: 1rem;
+      padding: 2rem;
       background: #111;
       position: relative;
       top: -1px;
-    }
-
-    & h3 {      
-      margin: 1rem 0;
     }
 
     & ul,
     & ol {
       margin-left: 2.5rem;
       margin-bottom: 1rem;
+
+      & li {
+        padding-left: .5rem;
+        padding-bottom: .5rem;
+      }
     }
 
     & p {

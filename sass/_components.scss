@@ -4,7 +4,7 @@
   font-size: 1.6rem;
   font-weight: 400;
   text-transform: uppercase;
-  padding: 0 2rem;
+  padding: 1rem 2rem;
   background-color: rgb(228, 167, 55);
   border: none;
   transition: background-color .3s;
@@ -12,9 +12,77 @@
   box-shadow: 0 1rem 1rem rgba(black, .25);
   text-decoration: none;
   color: black;
-
-
+  transform: scale(1);
+  white-space: nowrap;
+  line-height: 1;
+  
   &:hover {
     background-color: rgb(236, 193, 113);
+    transform: scale(1.05);
+    z-index: 2;
+  }
+
+  &--featured {
+    @extend .btn;
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+    color: white;
+    background: rgba(black, .75);
+    border: 1px solid rgba(white, .25);
+
+    &:hover {
+      background: rgba(77, 7, 7, .75);
+    }
+  }
+
+  &--credit {
+    @extend .btn;
+    display: grid;
+    grid-template-columns: min-content max-content;
+    align-items: center;
+    // justify-content: center;
+    column-gap: 1rem;
+    text-transform: none;
+    background: #777;
+
+    &__icon {
+      font-size: 3rem;
+      color: rgb(77, 7, 7);
+      text-align: center;
+      width: 3rem;
+    }
+
+    &-2 {
+      @extend .btn--credit;
+
+      & > .btn--credit__icon {
+        grid-row: 1 / span 2;
+      }
+    }
+
+
+    &__main-text {
+      font-weight: bold;
+      line-height: 0;
+    }
+
+    &__secondary-text {
+      line-height: 0;
+      font-size: 1.2rem;
+    }
+  }
+
+  &--icon {
+    @extend .btn;
+    font-size: 2rem;
+    padding: 0 0.5rem;
+    width: 3rem;    
+    aspect-ratio: 1 / 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(77, 7, 7);
+    background: #777;
   }
 }

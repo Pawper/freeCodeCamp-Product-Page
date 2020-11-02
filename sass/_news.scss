@@ -1,0 +1,23 @@
+.news {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  overflow-x: hidden;
+
+  @media only screen and (min-width: $bp-large) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  h2 {
+    grid-column: 1 / -1;
+  }
+
+  &__tweets {
+  }
+
+  &__blog {
+  }
+
+  padding-bottom: 3rem;
+}
