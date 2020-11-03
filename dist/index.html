@@ -22,11 +22,11 @@
   <!-- User Story #1: My product landing page should have a header element with a corresponding id="header". -->
   <header id="header" class="header">
     <div class="header__container">
-      <div class="header__logos">
+      <a href="#top" class="header__logos">
         <!-- User Story #2: I can see an image within the header element with a corresponding id="header-img". A company logo would make a good image here. -->
         <img src="img/tomb-raider-logo.png" alt="" id="header-img" class="header__main-logo">
         <img src="img/dagger-of-xian-logo.png" alt="" class="header__sub-logo">
-      </div>
+      </a>
       
       <input type="checkbox" id="navbar-collapse" class="navbar-collapse-checkbox">
       <label class="navbar-backdrop" for="navbar-collapse"></label>
@@ -53,6 +53,7 @@
   </header>
   <div class="container">
     <section class="hero">
+      <a id="top" class="anchor"></a>
       <div class="acclaim">
         <span class="acclaim__main">&ldquo;Jaw-dropping.&rdquo;</span>
         <cite class="acclaim__main-citation">- <a href="https://www.thegamer.com/tomb-raider-2-fan-remake-screens/" target="_blank">thegamer.com <i class="fas fa-external-link-alt"></i></a></cite>
@@ -105,21 +106,21 @@
       <a id="images" class="anchor"></a>
       <h2>Images</h2>
       <div class="images__grid">
-        <a href="" class="images__image-link"><img src="img/gallery/thumbnails/tomb_raider_ii___the_great_wall_of_china_ls_by_inna_vjuzhanina-dbebskj-600x338.png" alt="" class="images__image-thumb"></a>
-        <a href="" class="images__image-link"><img src="img/gallery/thumbnails/TRDOX-07.31.2017-17.33.25.02-600x338.png" alt="" class="images__image-thumb"></a>
       </div>
     </section>
     <section class="gameplay">
       <a id="gameplay" class="anchor"></a>
       <h2>Gameplay</h2>
-      <!-- User Story #6: I can watch an embedded product video with id="video". -->
-      <iframe class="gameplay__video" id="video" src="https://www.youtube.com/embed/V-pPOEAXFO4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      <iframe class="gameplay__video" src="https://www.youtube.com/embed/3SjFgGAEEqw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      <iframe class="gameplay__video" src="https://www.youtube.com/embed/8_6WG8Om-zs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      <iframe class="gameplay__video" src="https://www.youtube.com/embed/9znAXvf1i4w" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      <iframe class="gameplay__video" src="https://www.youtube.com/embed/Lsw8c0oTAIQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      <iframe class="gameplay__video" src="https://www.youtube.com/embed/NyjoLpJVtpk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      <iframe class="gameplay__video" src="https://www.youtube.com/embed/XL4dJsFW2gc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <div class="gameplay__video-wrapper">
+        <!-- User Story #6: I can watch an embedded product video with id="video". -->
+        <iframe class="gameplay__video" id="video" src="https://www.youtube.com/embed/V-pPOEAXFO4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe class="gameplay__video" src="https://www.youtube.com/embed/3SjFgGAEEqw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe class="gameplay__video" src="https://www.youtube.com/embed/8_6WG8Om-zs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe class="gameplay__video" src="https://www.youtube.com/embed/9znAXvf1i4w" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe class="gameplay__video" src="https://www.youtube.com/embed/Lsw8c0oTAIQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe class="gameplay__video" src="https://www.youtube.com/embed/NyjoLpJVtpk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe class="gameplay__video" src="https://www.youtube.com/embed/XL4dJsFW2gc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
 
       <a class="gameplay__previous-video" onclick="nextVid(-1)">&#10094;</a>
       <a class="gameplay__next-video" onclick="nextVid(1)">&#10095;</a>
