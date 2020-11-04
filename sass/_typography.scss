@@ -1,3 +1,5 @@
+@import 'variables';
+
 html {
   font-size: 62.5%;
   font-family: "Lato", sans-serif;
@@ -7,4 +9,13 @@ body {
   font-size: 1.6rem;
   line-height: 1.6;
   color: white;
+}
+
+a {
+  text-decoration: none;
+  color: $primary-color;
+
+  &:hover {
+    color: $primary-color-light;
+  }
 }

@@ -1,3 +1,5 @@
+@import 'variables';
+
 .gameplay {
   position: relative; // Used for arrow buttons
   display: grid;
@@ -26,13 +28,13 @@
     position: absolute;
     margin: 3rem;
     top: 42.5%;
-    color: rgba(white, .75);
+    color: $primary-color;
     font-weight: bold;
     font-size: 4rem;
     user-select: none;
 
     &:hover {
-      color: white;
+      color: $primary-color-light;
       transform: scale(1.5);
     }
   }

@@ -18,5 +18,6 @@
   "homepage": "https://github.com/Pawper/freeCodeCamp-Responsive-Web-Design-Projects---Build-a-Product-Landing-Page#readme",
   "devDependencies": {
     "node-sass": "^4.14.1"
-  }
+  },
+  "dependencies": {}
 }
