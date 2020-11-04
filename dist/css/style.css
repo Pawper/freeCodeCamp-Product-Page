@@ -113,7 +113,7 @@
     border-radius: .25rem; }
   .credit__name {
     font-size: 1.8rem;
-    color: goldenrod;
+    color: #ee9734;
     font-weight: bold;
     font-family: serif;
     font-variant: small-caps; }
@@ -149,7 +149,7 @@
   font-weight: 400;
   text-transform: uppercase;
   padding: 1rem 2rem;
-  background-color: #e4a737;
+  background-color: #ee9734;
   border: none;
   transition: background-color .3s;
   border-radius: .3rem;
@@ -160,9 +160,11 @@
   white-space: nowrap;
   line-height: 1; }
   .btn:hover, .btn--featured:hover, .btn--credit:hover, .btn--credit-2:hover, .btn--icon:hover {
-    background-color: #ecc171;
+    background-color: #f1bf62;
+    color: black;
     transform: scale(1.05);
-    z-index: 2; }
+    z-index: 2;
+    text-decoration: none; }
   .btn--featured {
     display: flex;
     gap: .5rem;
@@ -171,7 +173,8 @@
     background: rgba(0, 0, 0, 0.75);
     border: 1px solid rgba(255, 255, 255, 0.25); }
     .btn--featured:hover {
-      background: rgba(77, 7, 7, 0.75); }
+      background: rgba(77, 7, 7, 0.75);
+      color: white; }
   .btn--credit, .btn--credit-2 {
     display: grid;
     grid-template-columns: min-content max-content;
@@ -357,12 +360,12 @@ footer {
     position: absolute;
     margin: 3rem;
     top: 42.5%;
-    color: rgba(255, 255, 255, 0.75);
+    color: #ee9734;
     font-weight: bold;
     font-size: 4rem;
     user-select: none; }
     .gameplay__previous-video:hover, .gameplay__next-video:hover {
-      color: white;
+      color: #f1bf62;
       transform: scale(1.5); }
   .gameplay__next-video {
     right: 0; }
@@ -539,8 +542,8 @@ body {
   margin-top: 6.5rem; }
   @media only screen and (min-width: 66.25em) {
     .container {
-      border-left: 0.5rem #a57928 solid;
-      border-right: 0.5rem #a57928 solid; } }
+      border-left: 0.5rem #ee9734 solid;
+      border-right: 0.5rem #ee9734 solid; } }
 
 .container > section {
   padding: 1rem;
@@ -636,7 +639,7 @@ body {
     padding: 2rem;
     text-transform: uppercase;
     letter-spacing: .25ch;
-    color: #e4a737;
+    color: #ee9734;
     text-decoration: none;
     font-weight: bold;
     padding-right: 3.25rem;
@@ -676,7 +679,7 @@ body {
   box-shadow: 0 1rem 1rem transparent; }
 
 .navbar-toggler {
-  color: #e4a737;
+  color: #ee9734;
   cursor: pointer;
   margin: .75rem 0;
   border-radius: 50%; }
@@ -706,14 +709,67 @@ body {
   display: grid;
   justify-content: center;
   grid-template-columns: 1fr;
-  gap: 2rem;
+  column-gap: 2rem;
+  row-gap: 1rem;
   overflow-x: hidden;
   padding-bottom: 3rem; }
   @media only screen and (min-width: 40.625em) {
     .news {
       grid-template-columns: repeat(2, 1fr); } }
   .news h2 {
-    grid-column: 1 / -1; }
+    grid-column: 1 / -1;
+    height: min-content; }
+  .news__blog {
+    display: grid; }
+    .news__blog-post {
+      grid-area: 1 / 1 / -1 / -1;
+      height: calc(70vh - 5rem);
+      border-radius: .5rem; }
+      .news__blog-post-title {
+        display: block;
+        padding: 1rem 1.25rem;
+        font-size: 2rem;
+        border-top-left-radius: .5rem;
+        border-top-right-radius: .5rem;
+        text-transform: uppercase;
+        background-color: #333; }
+      .news__blog-post-content {
+        padding: .5rem 1.5rem;
+        overflow-y: scroll;
+        height: 100%;
+        background: #222; }
+      .news__blog-post-tags {
+        font-size: 1.2rem;
+        display: flex;
+        gap: .25rem; }
+        .news__blog-post-tags a {
+          color: white;
+          padding: .25rem .75rem;
+          background-color: #333;
+          transition: background-color .2s ease-out;
+          display: flex;
+          align-items: center;
+          gap: .5rem; }
+          .news__blog-post-tags a:hover {
+            color: black;
+            background-color: #ee9734;
+            text-decoration: none !important; }
+            .news__blog-post-tags a:hover i {
+              color: black; }
+          .news__blog-post-tags a i {
+            color: #ee9734; }
+      .news__blog-post p {
+        margin: 1rem 0; }
+        .news__blog-post p a:hover {
+          text-decoration: underline; }
+        .news__blog-post p img[role="presentation"] {
+          display: none; }
+      .news__blog-post a > img {
+        margin: .5rem; }
+      .news__blog-post img {
+        max-width: 100%; }
+      .news__blog-post p:empty {
+        display: none; }
 
 html {
   font-size: 62.5%;
@@ -723,3 +779,9 @@ body {
   font-size: 1.6rem;
   line-height: 1.6;
   color: white; }
+
+a {
+  text-decoration: none;
+  color: #ee9734; }
+  a:hover {
+    color: #f1bf62; }

@@ -1,4 +1,5 @@
 @import 'base';
+@import 'variables';
 
 .header {
   // User Story #13: The navbar should always be at the top of the viewport.
@@ -91,7 +92,7 @@
     padding: 2rem;
     text-transform: uppercase;
     letter-spacing: .25ch;
-    color: rgb(228, 167, 55);
+    color: $primary-color;
     text-decoration: none;
     font-weight: bold;
     padding-right: 3.25rem;
@@ -141,7 +142,7 @@
 }
 
 .navbar-toggler {
-  color: rgb(228, 167, 55);
+  color: $primary-color;
   cursor: pointer;
   margin: .75rem 0;
   border-radius: 50%;
