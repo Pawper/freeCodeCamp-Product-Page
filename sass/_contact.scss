@@ -1,0 +1,19 @@
+.contact {
+  &__form {
+    padding: 2rem 0;
+    margin: 0 auto;
+    max-width: 500px;
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 2rem;
+
+    & label {
+      text-align: right;
+    }
+
+    & .btn {
+      grid-column-end: -1;
+      text-align: center;
+    }
+  }
+}

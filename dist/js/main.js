@@ -27,19 +27,63 @@ function buildBlogPosts(xml) {
 
     let link = item.getElementsByTagName('link')[0].textContent;
     let creator = item.getElementsByTagName('dc:creator')[0].textContent;
-    let date = item.getElementsByTagName('pubDate')[0].textContent;
+
+    let pubDate = item.getElementsByTagName('pubDate')[0].textContent;
+    console.log(pubDate);
+    let dateMS = Date.parse(pubDate);
+    let dateObject = new Date(dateMS);
+    console.log(dateObject);
+    let options = {
+      weekday: "short",
+      month: "short",
+      day: "numeric",
+      year: "numeric",
+      hour: "numeric",
+      minute: "numeric",
+      timeZoneName: "short"
+    };
+    let formattedDate = dateObject.toLocaleString('en-US', options);
+    
     let category = item.getElementsByTagName('category')[0].textContent;
-    let description = item.getElementsByTagName('description')[0].textContent;
     let content = item.getElementsByTagName('content:encoded')[0].textContent;
     blogPost.innerHTML = `
-      <a class="news__blog-post-title" href="${link}"><h3>${title}</h3></a>
-      <div class="news__blog-post-content"><p class="news__blog-post-tags"><a href="${link}" class="news__blog-post-date"><i class="far fa-calendar-alt"></i> ${date}</a><a href="http://tombraider-dox.com/author/${creator}/" class="news__blog-post-author"><i class="fas fa-user"></i> ${creator}</a><a href="http://tombraider-dox.com/category/${category}/" class="news__blog-post-category"><i class="fas fa-tag"></i> ${category}</a></p>
+      <a target="_blank" class="news__blog-post-title" href="${link}"><h3>${title}</h3></a>
+      <div class="news__blog-post-nav"><p class="news__blog-post-tags"><a target="_blank" href="${link}" class="news__blog-post-date"><i class="far fa-calendar-alt"></i> ${formattedDate}</a><a target="_blank" href="http://tombraider-dox.com/author/${creator}/" class="news__blog-post-author"><i class="fas fa-user"></i> ${creator}</a><a target="_blank" href="http://tombraider-dox.com/category/${category}/" class="news__blog-post-category"><i class="fas fa-tag"></i> ${category}</a></p></div>
+      <div class="news__blog-post-content">
       ${content}</div>
     `
     blog.append(blogPost);
-  });  
+  });
+  latestPost = blog.getElementsByClassName('news__blog-post')[0];
+  latestPost.style.display = "grid";
+  latestPost.getElementsByClassName('news__blog-post-nav')[0].insertAdjacentHTML("afterbegin",`<a class="news__blog-post-back" onclick="showPreviousPost(this)" title="Previous Post"><i class="fas fa-chevron-left"></i></a>`);
 }
 
+function showPreviousPost(target) {
+  visiblePost = target.parentElement.parentElement;
+  visibleIndex = Array.prototype.indexOf.call(blog.children, visiblePost);
+  previousPost = blog.getElementsByClassName('news__blog-post')[visibleIndex + 1];
+  prevousIndex = Array.prototype.indexOf.call(blog.children, previousPost);
+  visiblePost.style.display = "none";
+  previousPost.style.display = "grid";
+  if (prevousIndex < (blog.children.length - 1)) {
+    previousPost.getElementsByClassName('news__blog-post-nav')[0].insertAdjacentHTML("afterbegin",`<a class="news__blog-post-back" onclick="showPreviousPost(this)" title="Previous Post"><i class="fas fa-chevron-left"></i></a>`);
+  }
+  previousPost.getElementsByClassName('news__blog-post-nav')[0].insertAdjacentHTML("beforeend",`<a class="news__blog-post-forward" onclick="showNextPost(this)" title="Next Post"><i class="fas fa-chevron-right"></i></a>`);
+}
+
+function showNextPost(target) {
+  visiblePost = target.parentElement.parentElement;
+  visibleIndex = Array.prototype.indexOf.call(blog.children, visiblePost);
+  nextPost = blog.getElementsByClassName('news__blog-post')[visibleIndex - 1];
+  prevousIndex = Array.prototype.indexOf.call(blog.children, nextPost);
+  visiblePost.style.display = "none";
+  nextPost.style.display = "grid";
+  if (prevousIndex > 0) {
+    nextPost.getElementsByClassName('news__blog-post-nav')[0].insertAdjacentHTML("beforeend",`<a class="news__blog-post-forward" onclick="showNextPost(this)" title="Next Post"><i class="fas fa-chevron-right"></i></a>`);
+  }
+  nextPost.getElementsByClassName('news__blog-post-nav')[0].insertAdjacentHTML("afterbegin",`<a class="news__blog-post-back" onclick="showPreviousPost(this)" title="Previous Post"><i class="fas fa-chevron-left"></i></a>`);
+}
 
 let gallery = document.getElementsByClassName('images__grid')[0];
 
