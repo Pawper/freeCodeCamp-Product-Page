@@ -4,17 +4,18 @@
   display: grid;
   justify-content: center;
   grid-template-columns: 1fr;
+  grid-template-rows: min-content;
   column-gap: 2rem;
   row-gap: 1rem;
   overflow-x: hidden;
 
   @media only screen and (min-width: $bp-large) {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    grid-template-rows: min-content 70vh;
   }
   
   h2 {
     grid-column: 1 / -1;
-    height: min-content;
   }
 
   &__tweets {
@@ -22,31 +23,68 @@
 
   &__blog {
     display: grid;
-
+    grid-template-rows: repeat(2, min-content) 1fr;
+    
     &-post {
+      position: relative;
       grid-area: 1 / 1 / -1 / -1;
-      height: calc(70vh - 5rem);
       border-radius: .5rem;
-      // display: none;
+      display: none;
       
       &-title {
         display: block;
-        padding: 1rem 1.25rem;
+        padding: .5rem 1.25rem .25rem 1.25rem;
         font-size: 2rem;
         border-top-left-radius: .5rem;
         border-top-right-radius: .5rem;
         text-transform: uppercase;
         background-color: #333;
       }
+
+      &-nav {
+        display: grid;
+        background-color: #282828;
+        align-items: center;
+        padding: 0 1rem 1rem 1rem;
+        grid-template-areas:
+          'nav nav'
+          'back forward';
+          grid-template-columns: repeat(2, 1fr);
+        @media only screen and (min-width: $bp-large) {
+          grid-template-areas:
+            'back nav forward';
+          grid-template-columns: 1fr max-content 1fr;
+        }
+      }
+
+      &-back,
+      &-forward {
+        font-size: 2rem;
+        text-align: center;
+        cursor: pointer;
+      }
+
+      &-back {
+        grid-area: back;
+      }
+
+      &-forward {
+        grid-area: forward;
+      }
       
       &-content {
+        height: 55vh;
+        @media only screen and (min-width: $bp-large) {
+          height: calc(70vh - 8.75rem);
+        }
         padding: .5rem 1.5rem;
         overflow-y: scroll;
-        height: 100%;
         background: #222;
       }
 
       &-tags {
+        grid-area: nav;
+        justify-self: center;
         font-size: 1.2rem;
         display: flex;
         gap: .25rem;
@@ -96,6 +134,7 @@
 
       img {
         max-width: 100%;
+        max-height: 100%;
       }
 
       p:empty {
