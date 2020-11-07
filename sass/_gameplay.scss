@@ -3,15 +3,32 @@
 .gameplay {
   position: relative; // Used for arrow buttons
   display: grid;
-  grid-template-rows: min-content 1fr;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: min-content 1fr min-content;
+  gap: 1rem;
+
+  // & h2 {
+  //   line-height: 1;
+  // }
+  
+  @media only screen and (min-width: $bp-large) {
+    grid-template-rows: min-content 1fr;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
 
   &__video-wrapper {
+    grid-column: 1 / -1;
     position: relative;
     padding-bottom: 56.25%;
     height: 0;
-    width: 80vw;
-    max-width: 1000px;
-    margin: auto;
+    margin: 0 -1rem;
+    
+    @media only screen and (min-width: $bp-large) {
+      width: 80vw;
+      max-width: 1000px;
+      margin: auto;
+    }
   }
 
   &__video {
@@ -25,21 +42,42 @@
 
   &__previous-video, &__next-video {
     cursor: pointer;
-    position: absolute;
-    margin: 3rem;
-    top: 42.5%;
+    top: 45%;
     color: $primary-color;
     font-weight: bold;
     font-size: 4rem;
     user-select: none;
+    padding: 0 2rem;
+    background: #222;
+    border-radius: 1rem;
+    text-align: center;
+
+    @media only screen and (min-width: $bp-large) {
+      background: none;
+      padding: 1rem 2rem;
+      position: absolute;
+      margin: 3rem;
+
+    }
 
     &:hover {
       color: $primary-color-light;
-      transform: scale(1.5);
+
+      @media only screen and (min-width: $bp-large) {
+        transform: scale(1.5);
+      }
     }
   }
 
+  &__previous-video {
+    @media only screen and (min-width: $bp-large) {
+      left: calc(5vh - 5rem);
+    }
+  }
   &__next-video {
-    right: 0;
+    @media only screen and (min-width: $bp-large) {
+      right: calc(5vh - 5rem);
+      text-align: right;
+    }
   }
 }

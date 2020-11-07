@@ -29,10 +29,8 @@ function buildBlogPosts(xml) {
     let creator = item.getElementsByTagName('dc:creator')[0].textContent;
 
     let pubDate = item.getElementsByTagName('pubDate')[0].textContent;
-    console.log(pubDate);
     let dateMS = Date.parse(pubDate);
     let dateObject = new Date(dateMS);
-    console.log(dateObject);
     let options = {
       weekday: "short",
       month: "short",
@@ -130,6 +128,7 @@ function addGalleryImages(aspectRatio) {
       newLoop = false;
       image = new Image();
       image.src = `img/gallery/${aspectRatio}/thumb/${imageIndex}.png`
+      // image.loading = 'lazy'; // doesn't seem to work in Chrome
       image.onload = exists;
       image.onerror = absent;
     }
@@ -138,7 +137,6 @@ function addGalleryImages(aspectRatio) {
   function exists() {
     let srcBreakup = this.src.split('/').reverse();
     let linkURL = `${srcBreakup[4]}/${srcBreakup[3]}/${srcBreakup[2]}/full/${srcBreakup[0]}`;
-    // console.log(`${document.URL.substr(0,document.URL.lastIndexOf('/'))}/${linkURL}`);
     imageThumbs.push(image);
     imageFulls.push(linkURL);
     imageIndex++;
