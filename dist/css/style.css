@@ -426,7 +426,9 @@ footer {
     padding: 0 2rem;
     background: #222;
     border-radius: 1rem;
-    text-align: center; }
+    text-align: center;
+    margin-bottom: 3rem;
+    width: min-content; }
     @media only screen and (min-width: 40.625em) {
       .gameplay__previous-video, .gameplay__next-video {
         background: none;
@@ -441,10 +443,12 @@ footer {
   @media only screen and (min-width: 40.625em) {
     .gameplay__previous-video {
       left: calc(5vh - 5rem); } }
-  @media only screen and (min-width: 40.625em) {
-    .gameplay__next-video {
-      right: calc(5vh - 5rem);
-      text-align: right; } }
+  .gameplay__next-video {
+    justify-self: end; }
+    @media only screen and (min-width: 40.625em) {
+      .gameplay__next-video {
+        right: calc(5vh - 5rem);
+        text-align: right; } }
 
 .hero {
   display: flex;
@@ -832,7 +836,8 @@ body {
         background-color: #333;
         line-height: 1; }
         .news__blog-post-title > h3 {
-          font-size: 2.5rem; }
+          font-size: 2.5rem;
+          padding-bottom: 0; }
       .news__blog-post-nav {
         display: grid;
         background-color: #282828;
@@ -886,10 +891,13 @@ body {
           text-decoration: underline; }
         .news__blog-post p img[role="presentation"] {
           display: none; }
-      .news__blog-post a > img {
-        margin: .5rem; }
+      .news__blog-post a {
+        overflow-wrap: break-word; }
+        .news__blog-post a > img {
+          margin: .5rem; }
       .news__blog-post img {
-        max-width: 100%; }
+        max-width: 100%;
+        height: auto; }
       .news__blog-post p:empty {
         display: none; }
 
@@ -905,7 +913,9 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Averia Libre', serif;
   font-variant: small-caps;
-  font-weight: 400; }
+  font-weight: 400;
+  line-height: 1;
+  padding-bottom: 1rem; }
 
 h2 {
   font-size: 3.25rem; }
