@@ -72,9 +72,6 @@ function buildBlogPosts(xml) {
     let fileName = blogImage.src.substring(blogImage.src.lastIndexOf('/')+1);
     let newFilePath = `img/blog/${fileName}`;
     blogImage.src = newFilePath;
-    blogImage.style.aspectRatio = '';
-    blogImage.style.aspectRatio = 'attr(width) / attr(height)';
-    
   });
   blogPostLinks = blog.querySelectorAll('.news__blog-post-content a');
   Array.prototype.forEach.call(blogPostLinks, link => {

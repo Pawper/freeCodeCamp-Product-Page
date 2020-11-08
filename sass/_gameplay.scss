@@ -6,10 +6,6 @@
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: min-content 1fr min-content;
   gap: 1rem;
-
-  // & h2 {
-  //   line-height: 1;
-  // }
   
   @media only screen and (min-width: $bp-large) {
     grid-template-rows: min-content 1fr;
@@ -51,6 +47,8 @@
     background: #222;
     border-radius: 1rem;
     text-align: center;
+    margin-bottom: 3rem;
+    width: min-content;
 
     @media only screen and (min-width: $bp-large) {
       background: none;
@@ -75,6 +73,7 @@
     }
   }
   &__next-video {
+    justify-self: end;
     @media only screen and (min-width: $bp-large) {
       right: calc(5vh - 5rem);
       text-align: right;
