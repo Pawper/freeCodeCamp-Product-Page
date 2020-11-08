@@ -1,14 +1,28 @@
 @import 'variables';
 
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Averia+Libre&display=swap');
+
 html {
   font-size: 62.5%;
-  font-family: "Lato", sans-serif;
+  font-family: "Fira Sans", serif;
 }
 
 body {
   font-size: 1.6rem;
   line-height: 1.6;
   color: white;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Averia Libre', serif;
+  font-variant: small-caps;
+  font-weight: 400;
+}
+h2 {
+  font-size: 3.25rem;
+}
+h3 {
+  font-size: 2.75rem;
 }
 
 a {
@@ -18,4 +32,14 @@ a {
   &:hover {
     color: $primary-color-light;
   }
+}
+
+::selection {
+  background: $primary-color;
+}
+
+input, textarea {
+  font-family: inherit;
+  font-size: inherit;
+  
 }
