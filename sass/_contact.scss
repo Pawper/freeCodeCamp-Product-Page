@@ -19,6 +19,7 @@
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
+    align-items: center;
     
     @media only screen and (min-width: $bp-large) {
       gap: 2rem;
@@ -47,6 +48,10 @@
     & .btn {
       grid-column-end: -1;
       text-align: center;
+    }
+
+    label[for="contact-message"] {
+      align-self: start;
     }
   }
 }

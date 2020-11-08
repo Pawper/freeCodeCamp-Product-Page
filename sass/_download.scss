@@ -91,10 +91,13 @@
     }
 
     &-main-text {
+      font-variant: small-caps;
       font-weight: bold;
     }
 
     &-sub-text {
+      font-weight: normal;
+      line-height: 1.25;
       font-size: 1.2rem;
     }
   }

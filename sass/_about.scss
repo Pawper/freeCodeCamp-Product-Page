@@ -27,7 +27,6 @@
       border-top-left-radius: .5rem;
       border-top-right-radius: .5rem;
       text-align: center;
-      text-transform: uppercase;
       grid-column: 1 / -1;
       background-color: rgba(rgb(77, 7, 7), .75);
       padding: 1rem;
@@ -151,9 +150,7 @@
 
   &__name {
     font-size: 1.8rem;
-    color: $primary-color;
-    font-weight: bold;
-    font-family: serif;
+    font-family: 'Averia Libre', serif;
     font-variant: small-caps;
   }
 

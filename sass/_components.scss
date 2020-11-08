@@ -5,7 +5,6 @@
   cursor: pointer;
   font-size: 1.6rem;
   font-weight: 400;
-  text-transform: uppercase;
   padding: 1rem 2rem;
   background-color: $primary-color;
   border: none;
@@ -16,7 +15,10 @@
   color: black;
   transform: scale(1);
   white-space: nowrap;
-  line-height: 1;
+  line-height: 1; 
+  font-family: "Fira Sans", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
   
   &:hover {
     background-color: $primary-color-light;
@@ -68,12 +70,17 @@
 
 
     &__main-text {
-      font-weight: bold;
-      line-height: 0;
+      width: 17ch;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
     &__secondary-text {
-      line-height: 0;
+      font-family: "Fira Sans", serif;
+      font-weight: normal;
+      text-transform: none;
+      font-variant: none;
+      line-height: 1.25;
       font-size: 1.2rem;
     }
   }
