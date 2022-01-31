@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- HTML Validator https://validator.w3.org/#validate_by_input -->
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>FCC: Product Landing Page</title>
+
+  <!-- Robots meta tags https://developers.google.com/search/reference/robots_meta_tag -->
+  <!-- Remove if you want the site to be crawled -->
+  <meta name="robots" content="NOINDEX, NOFOLLOW">
+
+  <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+</head>
+
+<body>
+  <!-- User Story #1: My product landing page should have a header element with a corresponding id="header". -->
+  <header id="header" class="header">
+    <div class="header__container">
+      <a href="#top" class="header__logos">
+        <!-- User Story #2: I can see an image within the header element with a corresponding id="header-img". A company logo would make a good image here. -->
+        <img src="img/tomb-raider-logo.png" alt="" id="header-img" class="header__main-logo">
+        <img src="img/dagger-of-xian-logo.png" alt="" class="header__sub-logo">
+      </a>
+      
+      <input type="checkbox" id="navbar-collapse" class="navbar-collapse-checkbox">
+      <label class="navbar-backdrop" for="navbar-collapse"></label>
+      
+      <!-- User Story #3: Within the #header element I can see a nav element with a corresponding id="nav-bar". -->
+      <nav id="nav-bar" class="header__navbar">
+        <!-- User Story #4: I can see at least three clickable elements inside the nav element, each with the class nav-link. -->
+        <!-- User Story #5: When I click a .nav-link button in the nav element, I am taken to the corresponding section of the landing page. -->
+        <a href="#news" class="nav-link header__navlink" onclick="closeMenu()">News</a>
+        <a href="#images" class="nav-link header__navlink" onclick="closeMenu()">Images</a>
+        <a href="#gameplay" class="nav-link header__navlink" onclick="closeMenu()">Gameplay</a>
+        <a href="#about" class="nav-link header__navlink" onclick="closeMenu()">About</a>
+        <a href="#download" class="nav-link header__navlink" onclick="closeMenu()">Download</a>
+        <a href="#contact" class="nav-link header__navlink" onclick="closeMenu()">Contact</a>
+      </nav>
+
+      <label for="navbar-collapse" class="navbar-toggler">
+        <span class="navbar-toggler-icon">
+          <i class="fas fa-bars"></i>
+          <i class="fas fa-times"></i>
+        </span>
+      </label>
+    </div>
+  </header>
+  <div class="container">
+    <section class="hero">
+      <a id="top" class="anchor"></a>
+      <div class="acclaim">
+        <span class="acclaim__main">&ldquo;Jaw-dropping.&rdquo;</span>
+        <cite class="acclaim__main-citation">- <a href="https://www.thegamer.com/tomb-raider-2-fan-remake-screens/" target="_blank">thegamer.com <i class="fas fa-external-link-alt"></i></a></cite>
+      </div>
+      <div class="subscribe__container">
+        <span class="subscribe__heading">A fan remake of Tomb Raider 2.<br>Don't miss an update.
+        </span>
+        <!-- User Story #7: My landing page has a form element with a corresponding id="form". -->
+        <form id="form" action="https://www.freecodecamp.com/email-submit" class="subscribe__form">
+          <!-- User Story #8: Within the form, there is an input field with id="email" where I can enter an email address. -->
+          <!-- User Story #9: The #email input field should have placeholder text to let the user know what the field is for. -->
+          <!-- User Story #10: The #email input field uses HTML5 validation to confirm that the entered text is an email address. -->
+          <label for="email" class="subscribe__label">
+            E-mail
+          </label>
+          <input type="email" id="email" name="email" placeholder="E-mail address" required class="subscribe__input">
+          <label for="name" class="subscribe__label">
+            Name
+          </label>
+          <input type="text" id="name" name="name" placeholder="Name" required class="subscribe__input">
+          <!-- User Story #11: Within the form, there is a submit input with a corresponding id="submit". -->
+          <!-- User Story #12: When I click the #submit element, the email is submitted to a static page (use this mock URL: https://www.freecodecamp.com/email-submit). -->
+          <input type="submit" id="submit" value="Subscribe" class="btn subscribe__submit">
+        </form>
+      </div>
+      <div class="featured-in">
+        <span>The surprisingly good fan project mentioned in:</span>
+        <div class="featured-in__links">
+          <a href="https://www.pcgamer.com/the-fan-remake-of-tomb-raider-2-in-unreal-4-has-a-demo/" target="_blank" class="btn--featured">PC Gamer <i class="fas fa-external-link-alt"></i></a>
+          <a href="https://www.destructoid.com/stories/play-a-demo-for-this-amazing-fan-remake-of-tomb-raider-ii-right-now-459156.phtml" target="_blank" class="btn--featured">Destructoid <i class="fas fa-external-link-alt"></i></a>
+          <a href="https://www.kotaku.com.au/2017/03/someones-remaking-tomb-raider-2-in-the-unreal-engine/" target="_blank" class="btn--featured">Kotaku <i class="fas fa-external-link-alt"></i></a>
+          <a href="https://www.eurogamer.net/articles/2017-09-01-you-can-now-play-the-impressive-fan-remake-of-tomb-raider-2" target="_blank" class="btn--featured">Eurogamer <i class="fas fa-external-link-alt"></i></a>
+        </div>
+      </div>
+    </section>
+    <section class="news">
+      <a id="news" class="anchor"></a>
+      <h2>The Latest</h2>
+      <div class="news__tweets">
+        <a class="twitter-timeline" data-height="70vh" data-theme="dark" href="https://twitter.com/Nicobass_DOX?ref_src=twsrc%5Etfw">Tweets by Nicobass_DOX</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      </div>
+      <div class="news__blog">
+
+      </div>
+    </section>
+    <section class="images">
+      <a id="images" class="anchor"></a>
+      <h2>Images</h2>
+      <div class="images__grid">
+      </div>
+    </section>
+    <section class="gameplay">
+      <a id="gameplay" class="anchor"></a>
+      <h2>Gameplay</h2>
+      <div class="gameplay__video-wrapper">
+        <!-- User Story #6: I can watch an embedded product video with id="video". -->
+        <iframe class="gameplay__video" id="video" src="https://www.youtube.com/embed/V-pPOEAXFO4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe class="gameplay__video" src="https://www.youtube.com/embed/3SjFgGAEEqw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe class="gameplay__video" src="https://www.youtube.com/embed/8_6WG8Om-zs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe class="gameplay__video" src="https://www.youtube.com/embed/9znAXvf1i4w" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe class="gameplay__video" src="https://www.youtube.com/embed/Lsw8c0oTAIQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe class="gameplay__video" src="https://www.youtube.com/embed/NyjoLpJVtpk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe class="gameplay__video" src="https://www.youtube.com/embed/XL4dJsFW2gc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+
+      <a class="gameplay__previous-video">&#10094;</a>
+      <a class="gameplay__next-video">&#10095;</a>
+    </section>
+    <section class="about">
+      <a id="about" class="anchor"></a>
+      <div class="about__text">
+        <h2>About Tomb Raider DOX</h2>
+        <p>
+          Tomb Raider DOX (The Dagger of Xian) is a remake of the original Tomb Raider 2 game made by Core Design in 1997 using Unreal Engine 4 by Epic Games. Tomb Raider & Lara Croft are trademarks of Square Enix Ltd.
+        </p>
+      </div>
+      <div class="credits">
+        <h3>Credits</h3>
+        <details class="credit">
+          <summary class="credit__summary">
+            <figure class="credit__figure">
+              <img src="img/twitter_nicobass.jpg" alt="" class="credit__photo">
+              <figcaption class="credit__caption">
+                <span class="credit__name">Nicobass</span>
+                <span class="credit__role">Producer</span>
+              </figcaption>
+            </figure>
+          </summary>
+          <div class="credit__links">
+            <a href="https://twitter.com/Nicobass_DOX" class="btn--credit-2">
+              <i class="fab fa-twitter btn--credit__icon"></i>
+              <span class="btn--credit__main-text">@Nicobass_DOX</span>
+              <span class="btn--credit__secondary-text">Twitter</span>
+            </a>
+            <a href="https://www.facebook.com/TombRaiderDox/" class="btn--credit-2">
+              <i class="fab fa-facebook btn--credit__icon"></i>
+              <span class="btn--credit__main-text">@TombRaiderDox</span>
+              <span class="btn--credit__secondary-text">Facebook</span>
+            </a>
+            <a href="https://www.youtube.com/user/Nicobass2015" class="btn--credit-2">
+              <i class="fab fa-youtube btn--credit__icon"></i>
+              <span class="btn--credit__main-text">Nicobass</span>
+              <span class="btn--credit__secondary-text">YouTube</span>
+            </a>
+            <a href="https://www.deviantart.com/nicobass" class="btn--credit">
+              <i class="fab fa-deviantart btn--credit__icon"></i>
+              <span class="btn--credit__main-text">DeviantArt</span>
+            </a>
+          </div>
+        </details>
+        <details class="credit">
+          <summary class="credit__summary">
+            <figure class="credit__figure">
+              <img alt="" class="credit__photo">
+              <figcaption class="credit__caption">
+                <span class="credit__name">Dean Kopri</span>
+                <span class="credit__role">Music Composer</span>
+              </figcaption>
+            </figure>
+          </summary>
+          <div class="credit__links">
+            <a href="https://twitter.com/KopriDean" class="btn--credit-2">
+              <i class="fab fa-twitter btn--credit__icon"></i>
+              <span class="btn--credit__main-text">@KopriDean</span>
+              <span class="btn--credit__secondary-text">Twitter</span>
+            </a>
+            <a href="https://www.facebook.com/dean.kopri?fref=mentions" class="btn--credit">
+              <i class="fab fa-facebook btn--credit__icon"></i>
+              <span class="btn--credit__main-text">Facebook</span>
+            </a>
+            <a href="https://www.youtube.com/user/krisnjik" class="btn--credit-2">
+              <i class="fab fa-youtube btn--credit__icon"></i>
+              <span class="btn--credit__main-text">Dean Music Production</span>
+              <span class="btn--credit__secondary-text">YouTube</span>
+            </a>
+          </div>
+        </details>
+        <details class="credit">
+          <summary class="credit__summary">
+            <figure class="credit__figure">
+              <img alt="" class="credit__photo">
+              <figcaption class="credit__caption">
+                <span class="credit__name">Inna Vjuzhanina</span>
+                <span class="credit__role">Menu & Loading Screen Art</span>
+              </figcaption>
+            </figure>
+          </summary>
+          <div class="credit__links">
+            <a href="https://twitter.com/InnaVjuzhanina" class="btn--credit-2">
+              <i class="fab fa-twitter btn--credit__icon"></i>
+              <span class="btn--credit__main-text">@InnaVjuzhanina</span>
+              <span class="btn--credit__secondary-text">Twitter</span>
+            </a>
+            <a href="https://www.facebook.com/innavjuzhanina?fref=mentions" class="btn--credit">
+              <i class="fab fa-facebook btn--credit__icon"></i>
+              <span class="btn--credit__main-text">Facebook</span>
+            </a>
+            <a href="http://inna-vjuzhanina.deviantart.com/" class="btn--credit">
+              <i class="fab fa-deviantart btn--credit__icon"></i>
+              <span class="btn--credit__main-text">DeviantArt</span>
+            </a>
+          </div>
+        </details>
+        <details class="credit">
+          <summary class="credit__summary">
+            <figure class="credit__figure">
+              <img alt="" class="credit__photo">
+              <figcaption class="credit__caption">
+                <span class="credit__name">Alexandre Serel</span>
+                <span class="credit__role">Story Writer</span>
+              </figcaption>
+            </figure>
+          </summary>
+          <div class="credit__links">
+            <a href="https://twitter.com/alexandre_serel" class="btn--credit-2">
+              <i class="fab fa-twitter btn--credit__icon"></i>
+              <span class="btn--credit__main-text">@alexandre_serel</span>
+              <span class="btn--credit__secondary-text">Twitter</span>
+            </a>
+            <a href="https://www.facebook.com/alexandre.serel?fref=mentions" class="btn--credit">
+              <i class="fab fa-facebook btn--credit__icon"></i>
+              <span class="btn--credit__main-text">Facebook</span>
+            </a>
+          </div>
+        </details>
+        <details class="credit">
+          <summary class="credit__summary">
+            <figure class="credit__figure">
+              <img alt="" class="credit__photo">
+              <figcaption class="credit__caption">
+                <span class="credit__name">Jennifer Milward</span>
+                <span class="credit__role">Lara Voice Acting</span>
+              </figcaption>
+            </figure>
+          </summary>
+          <div class="credit__links">
+            <a href="https://twitter.com/JRMilward" class="btn--credit-2">
+              <i class="fab fa-twitter btn--credit__icon"></i>
+              <span class="btn--credit__main-text">@JRMilward</span>
+              <span class="btn--credit__secondary-text">Twitter</span>
+            </a>
+            <a href="https://www.facebook.com/jennifer.milward?fref=mentions" class="btn--credit">
+              <i class="fab fa-facebook btn--credit__icon"></i>
+              <span class="btn--credit__main-text">Facebook</span>
+            </a>
+          </div>
+        </details>
+        <details class="credit">
+          <summary class="credit__summary">
+            <figure class="credit__figure">
+              <img alt="" class="credit__photo">
+              <figcaption class="credit__caption">
+                <span class="credit__name">Elijah Bulgakov</span>
+                <span class="credit__role">3D Modeling</span>
+              </figcaption>
+            </figure>
+          </summary>
+          <div class="credit__links">
+            <a href="https://twitter.com/E_Marlborn" class="btn--credit-2">
+              <i class="fab fa-twitter btn--credit__icon"></i>
+              <span class="btn--credit__main-text">@E_Marlborn</span>
+              <span class="btn--credit__secondary-text">Twitter</span>
+            </a>
+            <a href="https://marlborn.artstation.com/" class="btn--credit">
+              <i class="fab fa-artstation btn--credit__icon"></i>
+              <span class="btn--credit__main-text">ArtStation</span>
+            </a>
+          </div>
+        </details>
+        <details class="credit">
+          <summary class="credit__summary">
+            <figure class="credit__figure">
+              <img src="img/twitter_crystal-dynamics.png" alt="" class="credit__photo">
+              <figcaption class="credit__caption">
+                <span class="credit__name">Crystal Dynamics</span>
+                <span class="credit__role">SFX Source files</span>
+              </figcaption>
+            </figure>
+          </summary>
+          <div class="credit__links">
+            <a href="https://twitter.com/CrystalDynamics" class="btn--credit-2">
+              <i class="fab fa-twitter btn--credit__icon"></i>
+              <span class="btn--credit__main-text">@CrystalDynamics</span>
+              <span class="btn--credit__secondary-text">Twitter</span>
+            </a>
+            <a href="http://t.co/RojkAksepE?amp=1" class="btn--credit">
+              <i class="fas fa-link btn--credit__icon"></i>
+              <span class="btn--credit__main-text">crystald.com</span>
+            </a>
+          </div>
+        </details>
+        <details class="credit">
+          <summary class="credit__summary">
+            <figure class="credit__figure">
+              <img src="img/twitter_unreal.jpg" alt="" class="credit__photo">
+              <figcaption class="credit__caption">
+                <span class="credit__name">Epic Games</span>
+                <span class="credit__role">Unreal Engine 4</span>
+              </figcaption>
+            </figure>
+          </summary>
+          <div class="credit__links">
+            <a href="https://twitter.com/UnrealEngine" class="btn--credit-2">
+              <i class="fab fa-twitter btn--credit__icon"></i>
+              <span class="btn--credit__main-text">@UnrealEngine</span>
+              <span class="btn--credit__secondary-text">Twitter</span>
+            </a>
+            <a href="https://t.co/RfnOYDVQzL?amp=1" class="btn--credit">
+              <i class="fas fa-link btn--credit__icon"></i>
+              <span class="btn--credit__main-text">unrealengine.com</span>
+            </a>
+          </div>
+        </details>
+      </div>
+      <div class="testers">
+        <h3>Q.A. Testers</h3>
+        <div class="tester">
+          Dean Kopri
+          <div class="tester__links">
+            <a href="https://twitter.com/KopriDean" class="btn--icon">
+              <i class="fab fa-twitter"></i>
+            </a> 
+            <a href="https://www.youtube.com/user/krisnjik" class="btn--icon">
+              <i class="fab fa-youtube"></i>
+            </a>
+          </div>
+        </div>
+        <div class="tester">
+          Inna Vjuzhanina
+          <div class="tester__links">
+            <a href="https://twitter.com/InnaVjuzhanina" class="btn--icon">
+              <i class="fab fa-twitter"></i>
+            </a> 
+            <a href="http://inna-vjuzhanina.deviantart.com/" class="btn--icon">
+              <i class="fab fa-deviantart"></i>
+            </a>
+          </div>
+        </div>
+        <div class="tester">Jennifer Milward <a href="https://twitter.com/JRMilward" class="btn--icon"><i class="fab fa-twitter"></i></a></div>
+        <div class="tester">Christoff Morlock <a href="https://www.youtube.com/user/VieuxJeuxByMorlock" class="btn--icon"><i class="fab fa-youtube"></i></a></div>
+        <div class="tester">Alexandre Serel</div>
+        <div class="tester">Pierre Jean Rist</div>
+        <div class="tester">Elie Vancayseele</div>
+        <div class="tester">Alex Fly <a href="https://t.co/BDPrf5cMOU" class="btn--icon"><i class="fas fa-link"></i></a></div>
+        <div class="tester">Jérôme Caillère</div>
+        <div class="tester">Auré Croft</div>
+        <div class="tester">Chris Jones</div>
+        <div class="tester">AJ Rich</div>
+        <div class="tester">Maël Vila</div>
+      </div>
+      <div class="tr2-team">
+        <h3>Tomb Raider 2 Development Team</h3>
+        Gavin Rummery (Lead programmer)
+        Neal Boyd and Heather Gibson (Level designers)
+        Stuart Atkinson and Joss Charmet (Animators)
+        Nathan McCree (Music and sound effects)
+        Vicky Arnold (Script writer)
+      </div>
+    </section>
+    <section class="download">
+      <a id="download" class="anchor"></a>
+      <div class="download__container">
+        <div class="download__lead">
+          <h2 class="download__heading">Download the Tomb Raider DOX Demo</h2>
+          <span class="download__version">Version 1.1 [1,7 Go]</span>
+        </div>
+        <div class="download__content">
+          <div class="download__instructions">
+            <input class="lang-menu__radio" type="radio" name="lang" id="lang_en" checked><label for="lang_en" class="lang-menu__label">EN</label>
+            <div class="lang-box lang-english">
+              <h3>Minimum Requirements</h3>
+              <ul>
+                <li>Windows Seven or higher</li>          
+                <li>Graphic card 2GB VRAM with Dx11 comptatible</li>          
+                <li>4GB RAM (8GB strongly recommended)</li>          
+                <li>5,7GB free disk space (1.7 gb for the downloaded file and 4 gb for the uncompressed folder)</li>
+              </ul>
+              
+              <h3>Installation Instructions</h3>        
+              <ol>
+                <li>Download the file (64-Bit or 32-Bit, depending of your system)</li>
+                <li>Execute the setup file</li>
+                <li>If you need to install some prerequisite (Framework 3.5 etc…) go to Engine/Extras/Resrc/en-us/ and execute UE4PrereqSetup_x64.exe or UE4PrereqSetup_x86.exe</li>
+                <li>Launch TombRaiderDOX.exe</li>
+                <li>Enjoy!</li>
+              </ol>
+              <p>
+                If you can’t start it with all of these steps, try to launch it as administrator
+              </p>
+            </div>
+            <input class="lang-menu__radio" type="radio" name="lang" id="lang_fr"><label for="lang_fr" class="lang-menu__label">FR</label>
+            <div class="lang-box lang-french">
+              <h3>Configuration minimum requise</h3>
+              <ul>
+                <li>Windows 7 ou supérieur</li>          
+                <li>Une carte graphique qui comprend 2 Go de mémoire vidéo (VRAM) compatible avec DirectX11</li>          
+                <li>4 Go de RAM (8 Go fortement recommandés)</li>          
+                <li>5,7 Go d’espace libre sur le disque (1.7 Go pour le fichier de téléchargement et 4 Go pour les fichiers décompressés)</li>
+              </ul>
+              
+              <h3>Procédure d’installation</h3>        
+              <ol>
+                <li>Téléchargez le fichier (64-bits ou 32-bits, selon votre système)</li>
+                <li>Installez le jeu</li>
+                <li>Si vous avez besoin d’installer/de mettre à jour quelques utilitaires nécessaires au bon fonctionnement de la démo (comme Framework 3.5), rendez-vous dans : Engine/Extras/Resrc/en-us/ et lancez le fichier “UE4PrereqSetup_x64.exe” ou “UE4PrereqSetup_x86.exe”</li>
+                <li>Lancez le fichier “TombRaiderDOX.exe” pour jouer</li>
+                <li>Éclatez-vous !</li>
+              </ol>
+              <p>
+                Si vous ne parvenez toujours pas à lancer la démo, essayer de la lancer en tant qu’administrateur, pour ce faire : clic droit sur le fichier “TombRaiderDOX.exe” et “Exécuter en tant qu’administrateur”.
+              </p>
+            </div>
+          </div>
+          <div class="download__links">
+            <a href="#" class="btn download__btn">
+              <i class="fas fa-download download__btn-icon"></i>
+              <span class="download__btn-main-text">64-bit</span>
+              <span class="download__btn-sub-text">(Thanks to Kevin)</span>
+            </a>
+            <a href="#" class="btn download__btn">
+              <i class="fas fa-download download__btn-icon"></i>
+              <span class="download__btn-main-text">64-bit</span>
+              <span class="download__btn-sub-text">(Mega)</span>
+            </a>
+            <a href="#" class="btn download__btn">
+              <i class="fas fa-download download__btn-icon"></i>
+              <span class="download__btn-main-text">32-bit</span>
+              <span class="download__btn-sub-text">(Thanks to Kevin)</span>
+            </a>
+            <a href="#" class="btn download__btn">
+              <i class="fas fa-download download__btn-icon"></i>
+              <span class="download__btn-main-text">32-bit</span>
+              <span class="download__btn-sub-text">(Mega)</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="contact">
+      <form class="contact__form" action="">
+        <a id="contact" class="anchor"></a>
+        <h2>Contact</h2>
+        <label for="contact-name">Your Name</label> <input id="contact-name" type="text" name="name" placeholder="Lara Croft" required>
+        <label for="contact-email">Your Email</label> <input id="contact-email" type="text" name="email" required>
+        <label for="contact-subject">Subject</label> <input id="contact-subject" type="text" name="subject">
+        <label for="contact-message">Your Message</label>
+        <textarea name="message" id="contact-message" cols="30" rows="10"></textarea>
+        <a href="#contact" class="btn">Submit</a>
+      </form>
+    </section>
+  </div>
+  <footer>
+    <span>This is a fake web page made unofficially for a real fan work. Tomb Raider is Copyright 2020, Square
+      Enix</span>
+  </footer>
+</body>
+
+</html>
